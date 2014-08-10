@@ -1,5 +1,5 @@
 # Read in Data
-PowerConsumption<- read.csv("household_power_consumption.txt",header=T,sep=";", na.strings = "?")
+powerConsumption<- read.csv("household_power_consumption.txt",header=T,sep=";", na.strings = "?")
 colnames(powerConsumption)
 #Convert date
 powerConsumption$Date<- as.Date(powerConsumption$Date,"%d/%m/%Y")
@@ -18,6 +18,6 @@ plot(datetime,Voltage,type="l" )
 plot(datetime, dat[,7],  type="l", col="black", ylab="Energy sub metering", xlab="")
 lines(datetime,dat[,8], type="l", col="red")
 lines(datetime,dat[,9], type="l", col="blue")
-legend("topright", legend=c("Sub_metering_1", "Sub-metering_2", "Sub_meteing_3"), lwd=2,col=c("black", "red", "blue"))
+legend("topright", legend=c("Sub_metering_1", "Sub-metering_2", "Sub_meteing_3"), lwd=2,col=c("black", "red", "blue"),bty="n")
 plot(datetime,dat[,4],type="l",ylab="Global reactive_power")
 dev.off()
