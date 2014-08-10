@@ -1,5 +1,5 @@
 # Read in Data
-PowerConsumption<- read.csv("household_power_consumption.txt",header=T,sep=";", na.strings = "?")
+powerConsumption<- read.csv("household_power_consumption.txt",header=T,sep=";", na.strings = "?")
 colnames(powerConsumption)
 #Convert date
 powerConsumption$Date<- as.Date(powerConsumption$Date,"%d/%m/%Y")
